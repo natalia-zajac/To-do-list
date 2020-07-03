@@ -1,0 +1,10 @@
+.section {
+    margin: 10px 0;
+    box-shadow: 0px 0px 3px 1px #ddd;
+    background-color: white;
+}
+
+.section__header {
+    padding: 20px;
+    border-bottom: solid 2px hsl(0, 0%, 93%);  
+}

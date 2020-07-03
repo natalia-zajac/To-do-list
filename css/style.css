@@ -7,7 +7,7 @@ html {
 }
 
 .body {
-    background-color: #eee;
+    background: hsl(0, 0%, 93%);
     font-family: 'Montserrat', sans-serif;
-    flex-direction: column;
+    
 }
