@@ -1,0 +1,25 @@
+.tasks {
+    background-color: white;
+    
+   }
+
+.tasks__header {
+    padding: 10px;
+    margin-top: 10px;
+    border-bottom: solid 2px #eee;
+}
+
+.tasks__list {
+    background-color: white;
+    padding: 20px;
+    
+}
+
+.js-done {
+    color: red;
+  
+}
+
+.js-remove {
+    color: red;
+}

@@ -1,14 +1,6 @@
 {
 
     const tasks = [
-        {
-            content: "nagrać lekcję",
-            done: false,
-        },
-        {
-            content: "zjeść pierogi",
-            done: true,
-        },
     ];
 
 
@@ -65,7 +57,6 @@
 
         bindEvents();
 
-
     };
 
 
@@ -89,8 +80,6 @@
 
         form.addEventListener("submit", onFormSubmit);
     };
-
-
 
     init();
 

@@ -1,0 +1,50 @@
+.formBox {
+    margin: 0px;
+    box-shadow: 0px 0px 3px 1px #ddd;
+}
+
+.formBox__header {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.header__title {
+    padding: 10px;
+}
+
+.formBox__form {
+    background-color: white;
+    padding: 10px;
+}
+
+.formBox__input {
+    padding: 5px;
+    width: 500px;
+    border: 1px solid #eee;
+}
+
+.formBox__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+.formBox_button:visited {
+    border: none;
+}
+
+@media (max-width: 500px) {
+    .formBox__input {
+        max-width: 250px;
+        flex-basis: 51%;
+        flex-wrap: wrap;
+    }
+    .formBox__button {
+        max-width: 250px;
+        flex-basis: 51%;
+        flex-wrap: wrap;
+    }
+}
