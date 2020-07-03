@@ -1,25 +1,55 @@
 .tasks {
-    background-color: white;
-    
-   }
+    background-color: hsl(0, 0%, 100%);
+}
 
 .tasks__header {
     padding: 10px;
     margin-top: 10px;
-    border-bottom: solid 2px #eee;
+    border-bottom: solid 2px hsl(0, 0%, 93%);
 }
 
 .tasks__list {
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     padding: 20px;
-    
+    list-style: none;
+    border-bottom: solid 2px hsl(0, 0%, 93%);
 }
 
-.js-done {
-    color: red;
-  
+.tasks__item {
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    display: flex;
+    padding: 10px;
+    margin: 20px 5px;
+    line-height: 1.5em;
+    align-items: center;
 }
 
-.js-remove {
-    color: red;
+.tasks__button {
+    border: none;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 10px 5px;
+}
+
+.tasks__button--done {
+    background-color: hsl(120, 100%, 25%);
+}
+
+.tasks__button--done:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.tasks__button--remove {
+    background-color: hsl(0, 100%, 50%);
+}
+
+.tasks__button--remove:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.tasks__text {}
+
+.tasks__text--done {
+    text-decoration: line-through;
 }
