@@ -20,15 +20,15 @@
     margin: 10px;
 }
 
-.form_button:hover {
+.form__button:hover {
     background-color: hsl(180, 100%, 30%);
 }
 
-.form_button:active {
+.form__button:active {
     background-color: hsl(180, 100%, 35%);
 }
 
-.form_button:visited {
+.form__button:visited {
     border: none;
 }
 

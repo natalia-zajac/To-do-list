@@ -1,56 +1,48 @@
 {
-    const tasks = [
-    ];
-
-const reset = () => {
-    const input = document.querySelector(".js.input");
-    input.value = "";
-    input.focus();
-}
-
-
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
-
-        render();
-    };
+    const tasks = [];
 
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
-    }
+    };
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
-    }
+    };
 
-    const bindEvents = () => {
+    const addNewTask = (newTaskContent) => {
+        tasks.push({ content: newTaskContent });
+        render();
+    };
+
+
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-removeButton");
 
-        removeButtons.forEach((removeButton, index) => {
+        removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
-                removeTask(index);
+                removeTask(taskIndex);
             });
         });
+    };
 
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-doneButton");
 
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
             toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
+                toggleTaskDone(taskIndex);
             });
         });
     };
 
     const render = () => {
-        let taskListHTMLContent = "";
+        let tasksListHTMLContent = "";
 
         for (const task of tasks) {
-            taskListHTMLContent += `
-        <li class="tasks__item">
+            tasksListHTMLContent += `
+        <li class="tasks__item js-task">
             <button class="tasks__button tasks__button--done js-doneButton">
         ${task.done ? "✔️" : ""}
             </button>
@@ -62,17 +54,17 @@ const reset = () => {
         `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = taskListHTMLContent;
+        document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
 
-        bindEvents();
-
+        bindRemoveEvents();
+        bindToggleDoneEvents();
     };
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskElement.value.trim();
 
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
@@ -80,7 +72,6 @@ const reset = () => {
         }
 
         newTaskElement.focus();
-
     };
 
     const init = () => {
@@ -92,5 +83,6 @@ const reset = () => {
     };
 
     init();
+
 
 }
