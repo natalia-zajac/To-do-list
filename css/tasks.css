@@ -24,6 +24,7 @@
     width: 30px;
     height: 30px;
     margin: 10px 5px;
+    transition: 0.4s;
 }
 
 .tasks__button--done {
