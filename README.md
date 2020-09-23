@@ -20,6 +20,6 @@ My first and basic CRUD-style web application created during "FrontEnd developer
 - BEM convention
 
 ## Preview
-![to-do-list-1](images/todolist.jpg)
+![to-do-list-1](images/todolist.JPG)
 
-![to-do-list-2](images/todolist2.jpg)
+![to-do-list-2](images/todolist2.JPG)
