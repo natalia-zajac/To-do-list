@@ -19,4 +19,7 @@ My first and basic CRUD-style web application created during "FrontEnd developer
 - JavaScript(ES6)
 - BEM convention
 
-## Previous
+## Preview
+![to-do-list-1](images/todolist.jpg)
+
+![to-do-list-2](images/todolist2.jpg)
